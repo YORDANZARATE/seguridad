@@ -1,11 +1,197 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Mi primera página</title>
+  <meta charset="UTF-8" />
+  <title>Seguridad Yordan</title>
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #000000;
+      color: #00ffff;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background-color: #001122;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 10px #00ffff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    header .logo img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #00ffff;
+      object-fit: cover;
+      box-shadow: 0 0 10px #00ffff;
+    }
+    header .logo h1 {
+      font-size: 1.8rem;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+    }
+    nav a {
+      color: #00ffff;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #0099cc;
+      text-shadow: 0 0 8px #0099cc;
+    }
+    main {
+      flex-grow: 1;
+      padding: 50px 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .hero-text {
+      flex: 1 1 400px;
+    }
+    .hero-text h2 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 20px #00ffff;
+    }
+    .hero-text p {
+      font-size: 1.6rem;
+      color: #00bbff;
+      text-shadow: 0 0 8px #0077aa;
+      margin-bottom: 25px;
+    }
+    .hero-img {
+      flex: 1 1 300px;
+      max-width: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 25px #00ffff;
+      border: 3px solid #00ffff;
+    }
+    .hero-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    .services {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .service-card {
+      background-color: #001122;
+      border: 2px solid #00ffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00ffff;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+    .service-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #0099cc;
+    }
+    .service-card h3 {
+      margin-bottom: 15px;
+      font-size: 2rem;
+      color: #00ffff;
+      text-shadow: 0 0 12px #00ffff;
+    }
+    .service-card p {
+      font-size: 1.2rem;
+      color: #00bbff;
+      text-shadow: 0 0 8px #0077aa;
+    }
+    footer {
+      background-color: #001122;
+      padding: 15px 30px;
+      text-align: center;
+      color: #006677;
+      font-size: 1rem;
+      box-shadow: inset 0 1px 5px #003344;
+    }
+  </style>
 </head>
 <body>
-    <h1>¡Hola, mundo!</h1>
-    <p>Esta es mi primera página web.</p>
+  <header>
+    <div class="logo">
+      <img src="tu-foto.jpg" alt="Foto del dueño" />
+      <h1>Seguridad Yordan</h1>
+    </div>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Protegiendo tu futuro con tecnología y confianza</h2>
+        <p>
+          Somos una empresa líder en soluciones de seguridad integrales, comprometidos
+          con la protección de tus bienes y tu tranquilidad.
+        </p>
+        <p>
+          Contamos con sistemas avanzados de vigilancia, seguridad física y monitoreo 24/7.
+          Tu seguridad es nuestra prioridad.
+        </p>
+      </div>
+      <div class="hero-img">
+        <img src="seguridad.jpg" alt="Imagen de seguridad" />
+      </div>
+    </section>
+    <section id="servicios" class="services">
+      <div class="service-card">
+        <h3>Vigilancia 24/7</h3>
+        <p>Monitoreo constante para asegurar la protección total de tus instalaciones.</p>
+      </div>
+      <div class="service-card">
+        <h3>Seguridad Física</h3>
+        <p>Guardias entrenados para prevenir y responder ante cualquier situación.</p>
+      </div>
+      <div class="service-card">
+        <h3>Instalación de Cámaras</h3>
+        <p>Equipos de última generación para una supervisión efectiva y confiable.</p>
+      </div>
+      <div class="service-card">
+        <h3>Consultoría en Seguridad</h3>
+        <p>Asesoría personalizada para diseñar el plan de seguridad que necesitas.</p>
+      </div>
+    </section>
+  </main>
+  <footer id="contacto">
+    <p>© 2025 Seguridad Yordan. Todos los derechos reservados.</p>
+    <p>Contacto: yordan@email.com | Tel: +593 9 123 45678</p>
+  </footer>
 </body>
 </html>
