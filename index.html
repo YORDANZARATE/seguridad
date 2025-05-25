@@ -1,168 +1,142 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ProtecZar - Seguridad Privada Profesional</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SegurProtect - Seguridad Privada</title>
   <style>
     body {
-      background-color: #121212;
-      color: #eeeeee;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      background-color: #f4f4f4;
     }
+
     header {
-      background: #1f1f1f;
-      padding: 40px 20px;
-      text-align: center;
-      border-bottom: 3px solid #007bff;
-    }
-    header h1 {
-      font-size: 3.5rem;
-      margin-bottom: 10px;
-      letter-spacing: 2px;
-      font-weight: 900;
-    }
-    header p {
-      font-size: 1.3rem;
-      color: #a0a0a0;
-      margin-top: 0;
-    }
-    main {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .section-title {
-      font-size: 2.8rem;
-      border-bottom: 3px solid #007bff;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
-      font-weight: 700;
-    }
-    .services {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin-bottom: 60px;
-    }
-    .service-card {
-      background: #222222;
-      border-radius: 15px;
-      flex: 1 1 280px;
-      max-width: 320px;
-      padding: 30px 20px;
-      box-shadow: 0 0 15px #007bffaa;
-      transition: transform 0.3s ease;
+      background-color: #000428;
+      color: white;
+      padding: 20px;
       text-align: center;
     }
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 30px #007bffdd;
+
+    nav {
+      background-color: #004e92;
+      overflow: hidden;
     }
-    .service-icon {
-      font-size: 4.5rem;
-      color: #007bff;
-      margin-bottom: 20px;
-    }
-    .service-title {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-      font-weight: 700;
-    }
-    .service-desc {
-      font-size: 1.1rem;
-      color: #bbb;
-      line-height: 1.5;
-    }
-    .image-section {
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
       text-align: center;
-      margin-bottom: 60px;
+      padding: 14px 20px;
+      text-decoration: none;
     }
-    .image-section img {
-      width: 400px;
-      max-width: 90vw;
-      border-radius: 20px;
-      box-shadow: 0 0 30px #007bffaa;
+
+    nav a:hover {
+      background-color: #003366;
     }
+
+    section {
+      padding: 20px;
+    }
+
+    .services, .about, .contact {
+      background-color: white;
+      margin: 20px auto;
+      max-width: 1000px;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
     footer {
-      background: #1f1f1f;
-      padding: 30px 20px;
       text-align: center;
-      color: #777;
-      font-size: 1rem;
+      padding: 10px;
+      background-color: #000428;
+      color: white;
+      position: relative;
+      bottom: 0;
+      width: 100%;
     }
-    @media (max-width: 800px) {
-      .services {
-        flex-direction: column;
-        align-items: center;
-      }
-      .service-card {
-        max-width: 90vw;
-      }
-      header h1 {
-        font-size: 2.5rem;
-      }
-      .section-title {
-        font-size: 2rem;
-      }
-      .service-icon {
-        font-size: 3.5rem;
-      }
-      .image-section img {
-        width: 90vw;
-      }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #004e92;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #003366;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>ProtecZar</h1>
-  <p>Seguridad Privada Profesional y Confianza Total</p>
+  <h1>SegurProtect</h1>
+  <p>Tu seguridad, nuestra prioridad</p>
 </header>
 
-<main>
-  <section class="image-section">
-    <!-- Usa aquí la imagen que me diste, agrandada -->
-    <img src="img/escolta-privado-guardaespaldas-almeria-1080x721-1.jpeg" height="1000"
-                            width="1500"/> alt="Equipo de seguridad ProtecZar" />
-  </section>
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#contacto">Contacto</a>
+</nav>
 
-  <section>
-    <h2 class="section-title">Nuestros Servicios</h2>
-    <div class="services">
-      <div class="service-card">
-        <i class="fas fa-shield-alt service-icon"></i>
-        <h3 class="service-title">Protección Física</h3>
-        <p class="service-desc">Guardias entrenados para proteger personas y bienes con tecnología avanzada.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-video service-icon"></i>
-        <h3 class="service-title">Monitoreo CCTV</h3>
-        <p class="service-desc">Sistema de cámaras con vigilancia 24/7 para máxima seguridad.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-walking service-icon"></i>
-        <h3 class="service-title">Rondas de Seguridad</h3>
-        <p class="service-desc">Patrullajes constantes y supervisados para prevenir cualquier amenaza.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-key service-icon"></i>
-        <h3 class="service-title">Control de Acceso</h3>
-        <p class="service-desc">Sistemas modernos para el control y registro de entradas y salidas.</p>
-      </div>
-    </div>
-  </section>
-</main>
+<section id="inicio" class="services">
+  <h2>Bienvenido a SegurProtect</h2>
+  <p>Ofrecemos servicios de seguridad privada para empresas, eventos y residencias. Nuestro personal está altamente capacitado y comprometido con tu bienestar.</p>
+</section>
+
+<section id="servicios" class="services">
+  <h2>Servicios</h2>
+  <ul>
+    <li>Vigilancia 24/7</li>
+    <li>Seguridad para eventos</li>
+    <li>Monitoreo con cámaras</li>
+    <li>Custodia de bienes</li>
+    <li>Patrullaje motorizado</li>
+  </ul>
+</section>
+
+<section id="nosotros" class="about">
+  <h2>Sobre Nosotros</h2>
+  <p>Somos una empresa ecuatoriana con más de 10 años de experiencia en el área de seguridad privada. Contamos con tecnología de punta y un equipo profesional certificado.</p>
+</section>
+
+<section id="contacto" class="contact">
+  <h2>Contacto</h2>
+  <form onsubmit="enviarFormulario(event)">
+    <input type="text" placeholder="Tu nombre" required>
+    <input type="email" placeholder="Tu correo" required>
+    <textarea placeholder="Tu mensaje" rows="4" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
 
 <footer>
-  <p>© 2025 ProtecZar Seguridad Privada. Todos los derechos reservados.</p>
-  <p>Contacto: +593 98 123 4567 | ZARATEYORDAN.COM</p>
+  <p>&copy; 2025 SegurProtect. Todos los derechos reservados.</p>
 </footer>
+
+<script>
+  function enviarFormulario(event) {
+    event.preventDefault();
+    alert("Gracias por contactarnos. Te responderemos pronto.");
+  }
+</script>
 
 </body>
 </html>
